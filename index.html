@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="shortcut icon" href="images/logo/logo-redondo.ico" type="image/x-icon">
+
+    <title>Urban Store - Home</title>
+</head>
+
+<body>
+    <!-- CABEÇALHO - CATEGORIAS -->
+    <header id="menu" class="header-nav">
+
+        <!-- BOTÃO SANDUICHE -->
+        <div class="botao-sanduiche">
+            <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" onclick="checkSandu()">
+            <label for="openSidebarMenu" class="sidebarIconToggle mx-3 mt-2">
+                <div class="spinner diagonal part-1"></div>
+                <div class="spinner horizontal"></div>
+                <div class="spinner diagonal part-2"></div>
+            </label>
+            <!-- // -->
+
+            <div id="sidebarMenu" class="d-flex flex-column align-items-center">
+                <!-- LOGO - HEADER -->
+                <div class="logo-header ms-5">
+                    <img src="images/logo/logo-type2.png" alt="Logo Urban Store">
+                </div>
+                <!-- // -->
+
+                <!-- BOTÃO SANDUICHE - LISTA ORDENADA -->
+                <ul class="ul-headerList d-flex flex-column align-items-center ">
+                    <a href="pages/Joias.html" class="headerList-item-item1"><img src="images/icones-header/diamante.png" width="30px"
+                            class="mx-3">
+                        <li>Jóias</li>
+                    </a>
+                    <a href="pages/Acessorios.html" class="headerList-item"><img src="images/icones-header/acessorios.png" width="30px"
+                            class="mx-3">
+                        <li>Acessórios</li>
+                    </a>
+                    <a href="pages/ModaFeminina.html" class="headerList-item"><img src="images/icones-header/mulher.png" width="30px"
+                            class="mx-3">
+                        <li>Moda Feminina</li>
+                    </a>
+                    <a href="pages/ModaMasculina.html" class="headerList-item"><img src="images/icones-header/cara.png" width="30px"
+                            class="mx-3">
+                        <li>Moda masculina</li>
+                    </a>
+                    <a href="#" class="headerList-item"><img src="images/icones-header/cupom.png" width="30px"
+                            class="mx-3">
+                        <li>Cupons</li>
+                    </a>
+                </ul>
+                <!-- // -->
+            </div>
+        </div>
+
+
+        <!-- HEADER - CATEGORIAS -->
+        <div class="header-logo">
+            <a href="index.html"><img src="images/logo/logo-type2.png" width="150px" height="130px"></a>
+        </div>
+        
+        <div class="categorias-container d-flex align-items-center">
+
+            <div>
+                <ul class="list-categorias">
+                    <li><a href="pages/Joias.html" class="categorias-item">Jóias</a></li>
+                    <li><a href="pages/Acessorios.html" class="categorias-item">Acessórios</a></li>
+                    <li><a href="pages/ModaFeminina.html" class="categorias-item">Moda Feminina</a></li>
+                    <li><a href="pages/ModaMasculina.html" class="categorias-item">Moda masculina</a></li>
+                    <li data-bs-toggle="modal" data-bs-target="#ModalCupom" style="cursor: pointer;"><a
+                            class="categorias-item" data-placement="bottom" title="cupom"><mark>Cupons</mark></a>
+                    </li>
+                    <li data-bs-toggle="modal" data-bs-target="#ModalLogin"><a class="link-login" data-toggle="tooltip"
+                            data-placement="bottom" title="Login"><svg xmlns="http://www.w3.org/2000/svg" width="38"
+                                height="38" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                            </svg></a>
+                    </li>
+                    <li id="li-lua"><img class="categorias-item lua" src="./img/brightness.png" alt="" id="dark-mode"
+                            width="40px" onclick="switch_mode()" onclick="switch_reverse()">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- // -->
+
+    <!-- CAROUSEL PRINCIPAL -->
+    <section class="carousel-section ">
+
+        <div class="carousel-start">
+            <div id="carouselFade" class="carousel slide carousel-fade d-flex justify-content-center w-100"
+                style="z-index: 0;" data-bs-ride="carousel">
+                <div class=" carousel-inner carousel-start carousel-images">
+                    <div class="carousel-item active card">
+                        <div class="card-img-overlay carousel-content">
+                            <h2>Quem tem estilo tem tudo</h2>
+                        </div>
+                        <img src="images/carousel-images/image-1.jpg" class="d-block header-carousel-img w-100">
+                    </div>
+
+                    <div class="carousel-item card">
+                        <div class="card-img-overlay carousel-content">
+                            <h2>Seja o seu padrão</h2>
+
+                        </div>
+                        <img src="images/carousel-images/image-2.webp" class="d-block header-carousel-img w-100">
+                    </div>
+
+                    <div class="carousel-item card">
+                        <div class="card-img-overlay carousel-content">
+                            <h2>Confie no que você veste!</h2>
+
+                        </div>
+                        <img src="images/carousel-images/image-3.jpg" class="d-block header-carousel-img w-100">
+                    </div>
+
+                    <div class="carousel-item card">
+                        <div class="card-img-overlay carousel-content">
+                            <h2>Esqueça as regras. Se você gosta, use!</h2>
+
+                        </div>
+                        <img src="images/carousel-images/image-4.jpg" class="d-block header-carousel-img w-100">
+                    </div>
+
+                    <div class="carousel-item card">
+                        <div class="card-img-overlay carousel-content">
+                            <h2>Estilo é criar a sua própria moda.</h2>
+
+                        </div>
+                        <img src="images/carousel-images/image-5.jpg" class="d-block header-carousel-img w-100">
+                    </div>
+
+                    <div class="carousel-item card">
+                        <div class="card-img-overlay carousel-content">
+                            <h2>Quem tem estilo, faz moda.</h2>
+
+                        </div>
+                        <img src="images/carousel-images/image-6.webp" class="d-block header-carousel-img w-100">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- // -->
+
+    <!-- LOGO PRINCIPAL -->
+    <div class="main-logo d-flex justify-content-center mt-4">
+        <img src="images/logo/logo-type2.png" alt="" width="420px">
+    </div>
+    <!-- // -->
+
+    <!-- BANNER -->
+    <div class="d-flex justify-content-center mt-5 banner-1">
+        <img src="images/banners/banner02.png" alt="Produtos mais comprados" width="1200px" height="350px">
+    </div>
+    <!-- // -->
+
+
+    <!-- PRODUTOS - 1 -->
+    <section class="top-products mt-5">
+        <div class="container">
+            <div class="slider">
+                <a class="slider-btn prev-btn-1"><img src="images/botoes/tras.png" alt="" width="50px"></a>
+                <a class="slider-btn next-btn-1"><img src="images/botoes/frente.png" alt="" width="50px"></a>
+                <div class="food-slider">
+
+                    <div class="item active d-flex flex-column align-items-center product-item">
+                        <div class="product">
+                            <img src="images/products-1/products-1.webp" width="">
+                        </div>
+
+                        <div class="info">
+                            <h4>Camisa Shein Branca </h4>
+                            <span class="price ms-5">R$85.90</span>
+                            <a class="buy_now ms-4" href="" data-bs-toggle="modal"
+                                data-bs-target="#ModalProduto">Comprar</a>
+
+                        </div>
+
+
+                        <div class="details pt-0">
+                            <span class="time">Frete grátis para todo o Brasil</span>
+                            <br>
+                            <span>Fornecedora: <b>Renner</b></span>
+                        </div>
+                    </div>
+
+                    <div class="item active d-flex flex-column align-items-center product-item">
+                        <div class="product">
+                            <img src="images/products-1/products-2.webp">
+                        </div>
+
+                        <div class="info">
+                            <h4>Camisa Havaiana Masculina</h4>
+                            <div class="d-flex justify-content-around">
+                                <span class="price">R$64.99</span>
+                                <a class="buy_now" href="" data-bs-toggle="modal"
+                                    data-bs-target="#ModalProduto2">Comprar</a>
+                            </div>
+
+                        </div>
+
+                        <div class="details pt-0">
+                            <span class="time">Frete grátis para todo o Brasil</span>
+                            <br>
+                            <span>Fornecedora: <b>Riachuelo</b></span>
+                        </div>
+                    </div>
+
+                    <div class="item active d-flex flex-column align-items-center product-item">
+                        <div class="product">
+                            <img src="images/products-1/products-3.jpg">
+                        </div>
+
+                        <div class="info">
+                            <h4>Camisa Temática Branca Pets </h4>
+                            <span class="price">R$27.95</span>
+                            <a class="buy_now " href="" data-bs-toggle="modal"
+                                data-bs-target="#ModalProduto3">Comprar</a>
+
+                        </div>
+
+                        <div class="details pt-0">
+                            <span class="time">Frete grátis para todo o Brasil</span>
+                            <br>
+                            <span>Fornecedora: <b>Marisa</b></span>
+                        </div>
+                    </div>
+                    <div class="item active d-flex flex-column align-items-center product-item">
+                        <div class="product">
+                            <img src="images/products-1/products-s1.webp">
+                        </div>
+
+                        <div class="info">
+                            <h4>Kit de Regatas Femininas</h4>
+                            <span class="price">R$20.90</span>
+                            <a class="buy_now" href="" data-bs-toggle="modal"
+                                data-bs-target="#ModalProduto4">Comprar</a>
+
+                        </div>
+
+                        <div class="details pt-0">
+                            <span class="time">Frete grátis para todo o Brasil</span>
+                            <br>
+                            <span>Fornecedora: <b>Marisa</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- // -->
+
+
+
+    <!-- BANNER 2 -->
+    <div class="banner-div d-flex justify-content-center banner-2">
+        <img src="images/banners/banner4.png" alt="Produtos mais comprados" width="1200px" height="350px">
+    </div>
+    <!-- // -->
+
+    <!-- PRODUTOS - 2 -->
+    <section class="top-products mt-5">
+        <div class="container">
+            <div class="slider">
+                <a class="slider-btn prev-btn-2"><img src="images/botoes/tras.png" alt="" width="50px"></a>
+                <a class="slider-btn next-btn-2"><img src="images/botoes/frente.png" alt="" width="50px"></a>
+                <div class="food-slider-2">
+                    <div class="item active d-flex flex-column align-items-center product-item">
+                        <div class="product">
+                            <img src="images/products-1/products-1.webp" width="">
+                        </div>
+
+                        <div class="info">
+                            <h4>Camisa Shein Branca </h4>
+                            <span class="price ms-5">R$85.90</span>
+                            <a class="buy_now ms-4" href="" data-bs-toggle="modal"
+                                data-bs-target="#ModalProduto">Comprar</a>
+
+                        </div>
+
+
+                        <div class="details pt-0">
+                            <span class="time">Frete grátis para todo o Brasil</span>
+                            <br>
+                            <span>Fornecedora: <b>Renner</b></span>
+                        </div>
+                    </div>
+
+                    <div class="item active d-flex flex-column align-items-center product-item">
+                        <div class="product">
+                            <img src="images/products-1/products-2.webp">
+                        </div>
+
+                        <div class="info">
+                            <h4>Camisa Havaiana Masculina</h4>
+                            <div class="d-flex justify-content-around">
+                                <span class="price">R$64.99</span>
+                                <a class="buy_now" href="" data-bs-toggle="modal"
+                                    data-bs-target="#ModalProduto2">Comprar</a>
+                            </div>
+
+                        </div>
+
+                        <div class="details pt-0">
+                            <span class="time">Frete grátis para todo o Brasil</span>
+                            <br>
+                            <span>Fornecedora: <b>Riachuelo</b></span>
+                        </div>
+                    </div>
+
+                    <div class="item active d-flex flex-column align-items-center product-item">
+                        <div class="product">
+                            <img src="images/products-1/products-3.jpg">
+                        </div>
+
+                        <div class="info">
+                            <h4>Camisa Temática Branca Pets </h4>
+                            <span class="price">R$27.95</span>
+                            <a class="buy_now " href="" data-bs-toggle="modal"
+                                data-bs-target="#ModalProduto3">Comprar</a>
+
+                        </div>
+
+                        <div class="details pt-0">
+                            <span class="time">Frete grátis para todo o Brasil</span>
+                            <br>
+                            <span>Fornecedora: <b>Marisa</b></span>
+                        </div>
+                    </div>
+                    <div class="item active d-flex flex-column align-items-center product-item">
+                        <div class="product">
+                            <img src="images/products-1/products-s1.webp">
+                        </div>
+
+                        <div class="info">
+                            <h4>Kit de Regatas Femininas</h4>
+                            <span class="price">R$20.90</span>
+                            <a class="buy_now" href="" data-bs-toggle="modal"
+                                data-bs-target="#ModalProduto4">Comprar</a>
+
+                        </div>
+
+                        <div class="details pt-0">
+                            <span class="time">Frete grátis para todo o Brasil</span>
+                            <br>
+                            <span>Fornecedora: <b>Marisa</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- // -->
+
+    <!-- FAQ -->
+    <section class="container-faq" id="faq">
+        <div class="d-flex justify-content-center mb-4">
+            <h3>Perguntas frequentes</h3>
+        </div>
+        <div class="faq"><input type="checkbox" id="1">
+            <label for="1">Quem pode publicar produtos na Urban Store?</label>
+            <p>Apenas empresas com CNPJ podem fazer cadastro. É necessário lembrar também que <b>TODAS</b> as
+                lojas passam por um processo de verificação, para evitar possiveis golpes e garantir a
+                satisfação do cliente.</p>
+        </div>
+
+        <div class="faq"><input type="checkbox" id="2">
+            <label for="2">Quantas contas um usuário pode ter?</label>
+            <p>Apenas uma conta por CPF.</p>
+        </div>
+
+        <div class="faq"><input type="checkbox" id="3">
+            <label for="3">Como funcionam as compras dentro da Urban Store?</label>
+            <p>As vendas são feitas por meio de redirecionamento, ou seja, fora do site. A Urban Store trabalha
+                para que os clientes encontrem os melhores preços do mercado, em lojas de nossa confiança, dando
+                segurança ao cliente.</p>
+        </div>
+
+        <div class="faq"><input type="checkbox" id="4">
+            <label for="4">É possivel fazer compras dentro do site?</label>
+            <p>Momentaneamente, a Urban Store não trabalha com vendas dentro do site, mas existem planos para
+                que isso seja implementado.</p>
+        </div>
+
+        <div class="faq"><input type="checkbox" id="5">
+            <label for="5">Como entro em contato com o suporte?</label>
+            <p>Você pode facilmente acessar a guia <a href="" class="text-secondary">Central de ajuda</a>, ou
+                enviar um email para <b>contato.UrbanStore@UrbanStore.com</b>, contendo: <b>Nome do cliente</b>
+                e a <b>mensagem desejada</b>.</p>
+        </div>
+    </section>
+    <!-- // -->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer container-footer d-flex align-items-center justify-content-around">
+            <div class="ml-4">
+                <ul class="redes-sociais-footer d-flex mt-2 justify-content-center align-items-center gap-4">
+                    <li><a href=""><img src="images/redes-sociais/twitter.png" alt="Twitter"></a></li>
+                    <li><a href=""><img src="images/redes-sociais/instagram.png" alt="Instagram"></a></li>
+                    <li><a href=""><img src="images/redes-sociais/linkedin.png" alt="Linkedin"></a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-midContent mx-5">
+                <div class="d-flex align-items-center gap-5 justify-content-center">
+                    <a href="index.html"><img src="images/logo/logo-redondo.ico" width="130px"></a>
+                    <a href="index.html">
+                        <p class="fs-4 mt-3 footer-urbanStore-text">Urban Store</p>
+                    </a>
+                </div>
+
+
+                <!-- Icones - Redes Sociais -->
+
+                <div class="d-flex justify-content-center mt-3">
+                    <p>Todos os direitos reservados.</p>
+                </div>
+            </div>
+
+            <div class="container-links mt-5 mb-4">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <h5 class="ms-4">Links</h5>
+                    <ul class="text-center">
+                        <li><a href="" class="text-secondary">Central de ajuda</a></li>
+                        <li><a href="#faq" class="text-secondary">Perguntas frequentes</a></li>
+                        <li><a href="" class="text-secondary">Termos de uso</a></li>
+                        <li><a href="" class="text-secondary">Direitos autorais</a></li>
+                        <li><a href="" class="text-secondary">Regras</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- // -->
+
+    <!-- MODAIS -->
+    <section>
+        <!-- MODAL LOGIN -->
+        <div class="modal fade" id="ModalLogin" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body d-flex justify-content-center">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">E-mail:</label>
+                                <input type="email" class="form-control w-100" id="email-input"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Senha:</label>
+                                <input type="password" class="form-control w-100" id="password-input">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="d-flex justify-content-center gap-5 mb-3 flex-column">
+                        <div class="d-flex justify-content-center gap-3 flex-column align-items-center">
+                            <a href="pages/cadastro_cliente.html" class="text-secondary">Não tem uma conta?
+                                Cadastre-se</a>
+                            <a href="#" class="text-secondary">Esqueci minha senha</a>
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                    Eu concordo com os <a class="text-primary" href="termos/termos.html">termos e
+                                        condições</a>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center gap-3 align-items-center">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary" onclick="login()">Entrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // MODAL LOGIN -->
+
+        <!-- MODAL CUPONS -->
+        <div class="modal fade" id="ModalCupom" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body d-flex justify-content-center">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <div class="mb-3">
+                                <img src="images/cupom/cupom.png" alt="" width="300px">
+                            </div>
+                            <div>
+                                <h5>Digite seu email para receber cupons exclusivos!</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center gap-5 mb-3 flex-column">
+                        <div class="d-flex justify-content-center gap-3 flex-column align-items-center">
+                            <div class="form-group">
+                                <label>Email:</label>
+                                <input type="email" class="form-control" placeholder="Digite seu email">
+                            </div>
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="" id="cupom" required>
+                                <label class="form-check-label" for="cupom">
+                                    <small> Eu concordo com os <a class="text-primary">termos e condições</a></small>
+                                </label>
+                            </div>
+                            <div>
+                                <button class="btn btn-success">Registrar <img src="images/cupom/presente.png" alt=""
+                                        width="20px"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAIS PRODUTOS -->
+        <div>
+            <!-- MODAL PRODUTO 1 -->
+            <div class="modal fade" id="ModalProduto" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="d-flex justify-content-end pt-3 px-2">
+                            <button type="button" class="btn-close " data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex justify-content-center">
+                            <div class="p-5">
+                                <div>
+                                    <h4 class="text-success">R$85.90</h4>
+                                </div>
+                                <div>
+                                    <h3>Camisa Branca detalhada</h3>
+                                </div>
+                                <div>
+                                    <p>Fornecedora: <b>Shein</b></p>
+                                    <p>Tamanhos disponiveis: </p>
+                                    <div class="select">
+                                        <select>
+                                            <option value="1">Selecione o tamanho</option>
+                                            <option value="2">P</option>
+                                            <option value="3">M</option>
+                                            <option value="4">G</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-success mx-3 mt-3 buy-modal-btn"><img
+                                                src="images/buy-product/shopping-cart.png" alt="" width="35px"> Comprar
+                                            no site da Fornecedora</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <img src="images/products-1/products-1.webp" alt="Produto" width="300px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // MODAL PRODUTO 1-->
+
+            <!-- MODAL PRODUTO 2 -->
+            <div class="modal fade" id="ModalProduto2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="d-flex justify-content-end pt-3 px-2">
+                            <button type="button" class="btn-close " data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex justify-content-center">
+                            <div class="p-5">
+                                <div>
+                                    <h4 class="text-success">R$64.99</h4>
+                                </div>
+                                <div>
+                                    <h3>Camisa Havaiana Masculina</h3>
+                                </div>
+                                <div>
+                                    <p>Fornecedora: <b>Riachuelo</b></p>
+                                    <p>Tamanhos disponiveis: </p>
+                                    <div class="select">
+                                        <select>
+                                            <option value="1">Selecione o tamanho</option>
+                                            <option value="2">P</option>
+                                            <option value="3">M</option>
+                                            <option value="4">G</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-success mx-3 mt-3 buy-modal-btn"><img
+                                                src="images/buy-product/shopping-cart.png" alt="" width="35px"> Comprar
+                                            no site da Fornecedora</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <img src="images/products-1/products-2.webp" alt="Produto" width="300px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // -->
+
+            <!-- MODAL PRODUTO 3 -->
+            <div class="modal fade" id="ModalProduto3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="d-flex justify-content-end pt-3 px-2">
+                            <button type="button" class="btn-close " data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex justify-content-center">
+                            <div class="p-5">
+                                <div>
+                                    <h4 class="text-success">R$27.95</h4>
+                                </div>
+                                <div>
+                                    <h3>Camisa Temática Pets</h3>
+                                </div>
+                                <div>
+                                    <p>Fornecedora: <b>Marisa</b></p>
+                                    <p>Tamanhos disponiveis: </p>
+                                    <div class="select">
+                                        <select>
+                                            <option value="1">Selecione o tamanho</option>
+                                            <option value="2">P</option>
+                                            <option value="3">M</option>
+                                            <option value="4">G</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-success mx-3 mt-3 buy-modal-btn"><img
+                                                src="images/buy-product/shopping-cart.png" alt="" width="35px"> Comprar
+                                            no site da Fornecedora</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <img src="images/products-1/products-3.jpg" alt="Produto" width="300px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // -->
+
+            <!-- MODAL PRODUTO 4 -->
+            <div class="modal fade" id="ModalProduto4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="d-flex justify-content-end pt-3 px-2">
+                            <button type="button" class="btn-close " data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex justify-content-center">
+                            <div class="p-5">
+                                <div>
+                                    <h4 class="text-success">R$20.90</h4>
+                                </div>
+                                <div>
+                                    <h3>Kit Regatas</h3>
+                                </div>
+                                <div>
+                                    <p>Fornecedora: <b>C&A</b></p>
+                                    <p>Tamanhos disponiveis: </p>
+                                    <div class="select">
+                                        <select>
+                                            <option value="1">Selecione o tamanho</option>
+                                            <option value="2">P</option>
+                                            <option value="3">M</option>
+                                            <option value="4">G</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-success mx-3 mt-3 buy-modal-btn"><img
+                                                src="images/buy-product/shopping-cart.png" alt="" width="35px"> Comprar
+                                            no site da Fornecedora</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <img src="images/products-1/products-s1.webp" alt="Produto" width="300px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // -->
+        </div>
+        <!-- // -->
+    </section>
+    <!-- //  -->
+</body>
+
+<!-- BOOTSTRAP -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- // BOOTSTRAP -->
+
+<!-- SCRIPTS -->
+<!-- HEADER -->
+<script src="script/header.js"></script>
+
+<!-- // HEADER -->
+
+<script src="script/slider.js"></script>
+<!-- BOTÃO SANDUICHE -->
+<script src="script/sanduich.js"></script>
+<!-- // BOTÃO SANDUICHE -->
+<!-- // SCRIPTS -->
+
+
+</html>

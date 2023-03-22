@@ -1,0 +1,77 @@
+.faq{
+    max-width:700px;
+    background:#fff;
+    margin:5px auto;
+    padding:10px;
+    padding-top:40px;
+    box-sizing:border-box;
+    position:relative;
+    line-height:50px;
+    border:1px solid lightgray;
+    border-radius: 5px;
+  }
+  
+  .faq label{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:50px; 
+    padding-left:40px;
+    cursor:pointer;
+    user-select:none;
+  }
+  
+  .faq label::before{
+      position:absolute;
+      left:12px;
+      top:50%;
+      transform:translate(0, -50%);
+      border-top: 10px solid transparent;
+      border-left: 15px solid lightgray;
+      border-bottom: 10px solid transparent;
+      content:'';
+      transition: transform .2s linear;
+  }
+  
+  
+  
+  .faq > p{
+    height:0;
+    transform:scaleY(0);
+    max-width:700px;
+    box-sizing:border-box;
+    padding:0;
+    overflow:hidden;
+    font-size:16px;
+    line-height:1.4;
+    margin:0 auto;
+    transition:padding .2s ease-in , height .2s ease-in , transform .2s;
+  } 
+  
+  
+  
+  .faq > input{
+     display:none;
+  }
+  
+  .faq > input[type="checkbox"]:checked + label + p{
+      height:auto;
+      padding:20px 7px;
+      transform:scaleY(1);
+  } 
+  
+  .faq > input[type="checkbox"]:checked + label::before{
+      transform:rotate(90deg) translateX(-10px);  
+  }
+
+
+  .container-faq{
+    margin-bottom: 100px;
+    margin-top: 80px;
+  }
+
+  .container-faq h3{
+    color: white !important;
+  }
+  

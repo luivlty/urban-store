@@ -1,0 +1,12 @@
+.banner-femProducts img{
+    border-radius: 10px;
+}
+
+.banner-femProducts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 120px;
+    margin-bottom: 20px;
+}

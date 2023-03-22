@@ -1,0 +1,8 @@
+.buy-modal-btn{
+    background-color: #3498db !important;
+    transition: 0.3s;
+}
+
+.buy-modal-btn:hover{
+    color: black !important;
+}

@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+
+
+
+#sidebarMenu {
+    position: fixed;
+    left: 0;
+    width: 300px;
+    transform: translateX(-300px);
+    transition: transform 250ms ease-in-out;
+    background-color: #101107;
+    height: 100vh !important;
+    z-index: 2;
+    padding-top: 60px;
+    padding-right: 70px;
+}
+
+
+
+
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+.openSidebarMenu{
+    display: none;
+}
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+
+
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+/* CONFIGURAÇÕES PRINCIPAIS DO HEADER */
+header {
+    width: 100%;
+    text-align: center;
+}
+
+header a,
+header p {
+    font-size: 24px;
+    color: white !important;
+}
+
+
+.container-header {
+    background-color: #101107;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+}
+
+.div-containerHeader{
+    background-color: #101107;
+    position: fixed;
+    height: 100vh;
+    width: 70px;
+}
+
+/* LOGO */
+.logo-header img {
+    width: 150px;
+}
+
+.logo-headerCommon {
+    margin-left: 60px;
+
+}
+
+
+/* // */
+
+
+/* LISTA ORDENADA */
+.headerList-item li {
+    margin-top: 40px;
+}
+
+.headerList-item-item1 li {
+    margin-top: 30px;
+}
+
+.ul-headerList li {
+    transition: 0.3s;
+}
+
+.ul-headerList li {
+    display: inline-block;
+    position: relative;
+}
+/* // */
+
+/* HOVER - LISTA ORDENADA */
+.ul-headerList li:hover {
+    color: #5584A2;
+}
+/* // */
+
+/* UNDERLINE HOVER */
+.ul-headerList li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #5584A2;
+    transform-origin: bottom right;
+    transition: transform 0.28s ease-out;
+}
+
+.ul-headerList li:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* // */
+
+
+.botao-sanduiche{
+    visibility: hidden;
+}
+
+
+.ul-headerList a{ 
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 500px) {
+    .botao-sanduiche{
+        visibility: visible;
+    }
+    
+
+
+    .header-logo img{
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .botao-sanduiche{
+        visibility: visible;
+    }
+    
+    .header-logo img{
+        width: 150px;
+    }
+
+    .categorias-container{
+        visibility: hidden;
+    }
+
+    .main-logo img{
+        width: 170px !important;
+    }
+
+    .logo-categorias{
+        text-align: cent;
+        visibility: visible !important;
+        
+    }
+
+
+
+}

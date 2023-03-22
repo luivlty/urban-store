@@ -1,0 +1,64 @@
+
+#menu{
+    width: 100%;
+}
+
+.menuFixo {
+    position: fixed;
+    z-index: 99 !important;
+    background-color: #5584A2;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 22px;
+    transition: 0.92s;
+    display: flex;
+    align-items: center;
+    height: 100px;
+
+}
+
+
+.menuFixo ul a{
+    font-size: 22px ;
+
+}
+
+
+.header-nav{
+    display: flex;
+    justify-content: center;
+    transition: 0.98s;  
+    
+}
+
+
+
+.categorias-item{
+    font-size: 20px !important;   
+}
+
+.list-categorias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 0px !important;
+}
+
+
+
+.categorias-container a{
+    color: white !important;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 500px) {
+    header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+
+
+}

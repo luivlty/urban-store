@@ -1,0 +1,41 @@
+.footer{
+    background-color: whitesmoke;
+}
+
+/* CONFIGURAÇÃO - REDES SOCIAIS */
+.redes-sociais-footer img{
+    width: 45px;
+    transition: 0.43s;
+}
+
+.redes-sociais-footer img:hover{
+    width: 60px;
+}
+/* // */
+
+/* Hover Urban Store */
+
+.footer-urbanStore-text{
+    color: black !important;
+}
+
+.footer-urbanStore-text:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 2px;
+	width: 0px;
+	background: transparent;
+	transition: width .38s ease, background-color .38s ease;
+}
+
+.footer-urbanStore-text:hover:after {
+	width: 100%;
+	background: black;
+}
+/* // */
+
+
+
+
+

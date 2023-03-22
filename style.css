@@ -1,0 +1,166 @@
+@import url(css/nao-editar/reset.css);
+
+@import url(css/header.css);
+
+@import url(css/modal.css);
+
+@import url(css/botao-sanduiche.css);
+
+@import url(css/carousel.css);
+
+@import url(css/slider-products.css);
+
+@import url(css/products.css);
+
+@import url(css/modal.css);
+
+@import url(css/modal-produtos.css);
+
+@import url(css/footer.css);
+
+@import url(css/faq.css);
+
+@import url(css/cadastro.css);
+
+@import url(css/productsOnly.css);
+
+@import url(css/femProducts.css);
+
+@import url(css/timeleft.css);
+
+*, ::after, ::before{
+    box-sizing: content-box;
+}
+
+body{
+    background-image: url(images/wallpaper/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-acessorios{
+    background-image: url(images/wallpaper/bg-acessorios.png);
+}
+
+.bg-fem{
+    background-image: url(images/wallpaper/bg-femProducts.png);
+}
+
+.bg-joias{
+    background-image: url(images/wallpaper/bg-joias.png);
+}
+
+.bg-MenProducts{
+    background-image: url(images/wallpaper/bg-MenProducts.png);
+}
+
+header{
+    width: 100vh;
+}
+
+footer a{
+    transition: 0.3s;
+}
+
+footer a:hover{
+    color: black !important;
+}
+
+a{
+    text-decoration: none !important;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: black !important;
+}   
+
+@media screen and (max-width: 500px) {
+
+    .main-logo{
+        margin: 0 auto;
+    }
+    .banner-1{
+        margin-left: 90px;
+    }
+    
+    .banner-1 img{
+        width: 100vh;
+    }
+}
+
+@media screen and (max-width: 425px) and (max-width:576px){
+    body{
+        width: 100%;
+    }
+
+        .container{
+      max-width:540px ;
+    }
+    .product img {
+        
+      max-width: 200px !important;
+      max-height: 240px !important;
+  }
+    .slick-slide{
+      width: 250px !important;
+    }
+
+    .header-logo{
+        position:fixed;
+    }
+
+    .carousel-section{
+        padding-top: 40px;
+    }
+
+    .banner-1, .banner-2{
+        margin: 0px !important;
+    }
+
+    .banner-1 img, .banner-2 img{
+        max-height: 20px !important;
+        max-width: 400px !important;
+    }
+
+    .carousel-section{
+        padding-top: 60px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    
+    body{
+        max-width: 100%;
+    }
+
+    .header-logo{
+        position:fixed;
+    }
+
+    .carousel-section{
+        padding-top: 40px;
+    }
+
+    .banner-1 img, .banner-2 img{
+        max-height: 230px !important;
+        max-width: 700px;
+    }
+
+    .carousel-section{
+        padding-top: 60px;
+    }
+}
+
+@media (min-width:576px) and (max-width:767px){
+
+    .header-logo{
+        position:fixed;
+    }
+
+    .carousel-section{
+        padding-top: 40px;
+    }
+
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+    <link rel="shortcut icon" href="../images/logo/logo-redondo.ico" type="image/x-icon">
+
+    <title>Urban - Acessórios </title>
+</head>
+
+<body class="bg-acessorios">
+    <!-- CABEÇALHO - CATEGORIAS -->
+    <header id="menu" class="header-nav" style="top: 0;">
+
+        <!-- BOTÃO SANDUICHE -->
+        <div class="botao-sanduiche">
+            <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" onclick="checkSandu()">
+            <label for="openSidebarMenu" class="sidebarIconToggle mx-3 mt-2">
+                <div class="spinner diagonal part-1"></div>
+                <div class="spinner horizontal"></div>
+                <div class="spinner diagonal part-2"></div>
+            </label>
+            <!-- // -->
+
+            <div id="sidebarMenu" class="d-flex flex-column align-items-center" style="z-index: 99;">
+                <!-- LOGO - HEADER -->
+                <div class="logo-header ms-5">
+                    <img src="../images/logo/logo-type2.png" alt="Logo Urban Store">
+                </div>
+                <!-- // -->
+
+                <!-- BOTÃO SANDUICHE - LISTA ORDENADA -->
+                <ul class="ul-headerList d-flex flex-column align-items-center">
+                    <a href="Joias.html" class="headerList-item-item1"><img src="../images/icones-header/diamante.png"
+                            width="30px" class="mx-3">
+                        <li>Jóias</li>
+                    </a>
+                    <a href="Acessorios.html" class="headerList-item"><img src="../images/icones-header/acessorios.png"
+                            width="30px" class="mx-3">
+                        <li>Acessórios</li>
+                    </a>
+                    <a href="ModaFeminina.html" class="headerList-item"><img src="../images/icones-header/mulher.png"
+                            width="30px" class="mx-3">
+                        <li>Moda Feminina</li>
+                    </a>
+                    <a href="ModaMasculina.html" class="headerList-item"><img src="../images/icones-header/cara.png"
+                            width="30px" class="mx-3">
+                        <li>Moda masculina</li>
+                    </a>
+                    <a href="#" class="headerList-item"><img src="../images/icones-header/cupom.png" width="30px"
+                            class="mx-3">
+                        <li>Cupons</li>
+                    </a>
+                </ul>
+                <!-- // -->
+            </div>
+        </div>
+
+
+        <!-- HEADER - CATEGORIAS -->
+        <div class="header-logo">
+            <a href="../index.html"><img src="../images/logo/logo-type2.png" width="150px" height="130px"></a>
+        </div>
+
+        <div class="categorias-container d-flex align-items-center">
+
+            <div>
+                <ul class="list-categorias">
+                    <li><a href="Joias.html" class="categorias-item">Jóias</a></li>
+                    <li><a href="Acessorios.html" class="categorias-item">Acessórios</a></li>
+                    <li><a href="ModaFeminina.html" class="categorias-item">Moda Feminina</a></li>
+                    <li><a href="ModaMasculina.html" class="categorias-item">Moda masculina</a></li>
+                    <li data-bs-toggle="modal" data-bs-target="#ModalCupom" style="cursor: pointer;"><a
+                            class="categorias-item" data-placement="bottom" title="cupom"><mark>Cupons</mark></a>
+                    </li>
+                    <li data-bs-toggle="modal" data-bs-target="#ModalLogin"><a class="link-login" data-toggle="tooltip"
+                            data-placement="bottom" title="Login"><svg xmlns="http://www.w3.org/2000/svg" width="38"
+                                height="38" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                            </svg></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- // -->
+
+    <!-- LOGO PRINCIPAL -->
+    <div class="main-logo d-flex justify-content-center mt-4">
+        <img src="../images/logo/logo-type2.png" alt="" width="420px">
+    </div>
+    <!-- // -->
+
+    <!-- TEXTO ANIMADO -->
+    <div id="container-effect" class="text-center">
+        OFERTAS EXCLUSIVAS
+        <div id=flip>
+            <div>
+                <div>Modernidade</div>
+            </div>
+            <div>
+                <div>Criatividade</div>
+            </div>
+            <div>
+                <div>Tendência</div>
+            </div>
+        </div>
+    </div>
+    <!-- // -->
+
+    <!-- TIMELEFT -->
+    <div class="container-timeleft d-flex justify-content-center">
+        <div class="countdown-wrapper">
+            <div class="days time-el d-flex flex-column">
+                <output id="days"></output>
+                <label for="days" class="days">Dias</label>
+            </div>
+            <div class="hours time-el d-flex flex-column">
+                <output id="hours"></output>
+                <label for="hours" class="hours">Horas</label>
+            </div>
+            <div class="minutes time-el d-flex flex-column">
+                <output id="minutes"></output>
+                <label for="minutes" class="minutes">Minutos</label>
+            </div>
+            <div class="seconds time-el d-flex flex-column">
+                <output id="seconds"></output>
+                <label for="seconds" class="seconds">Segundos</label>
+            </div>
+        </div>
+    </div>
+    <!-- // -->
+
+
+    <section class="body-femProducts">
+
+        <!-- exhibit container -->
+        <div class="exhibit-container mb-5">
+
+
+            <div class="d-flex justify-content-center">
+                <img src="../images/banner-Acessorios/banner01.png" alt="" class="rounded">
+            </div>
+
+            <!-- product list -->
+            <div class="product-list mt-5" id="product-list" style="padding-top: 40px;">
+                <!-- produtos-->
+            </div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Voltar</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Próximo</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer container-footer d-flex align-items-center justify-content-around">
+            <div class="ml-4">
+                <ul class="redes-sociais-footer d-flex mt-2 justify-content-center align-items-center gap-4">
+                    <li><a href=""><img src="../images/redes-sociais/twitter.png" alt="Twitter"></a></li>
+                    <li><a href=""><img src="../images/redes-sociais/instagram.png" alt="Instagram"></a></li>
+                    <li><a href=""><img src="../images/redes-sociais/linkedin.png" alt="Linkedin"></a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-midContent mx-5">
+                <div class="d-flex align-items-center gap-5 justify-content-center">
+                    <a href="../index.html"><img src="../images/logo/logo-redondo.ico" width="130px"></a>
+                    <a href="../index.html">
+                        <p class="fs-4 mt-3 footer-urbanStore-text">Urban Store</p>
+                    </a>
+                </div>
+
+
+                <!-- Icones - Redes Sociais -->
+
+                <div class="d-flex justify-content-center mt-3">
+                    <p>Todos os direitos reservados.</p>
+                </div>
+            </div>
+
+            <div class="container-links mt-5 mb-4">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <h5 class="ms-4">Links</h5>
+                    <ul class="text-center">
+                        <li><a href="" class="text-secondary">Central de ajuda</a></li>
+                        <li><a href="../index.html" class="text-secondary">Perguntas frequentes</a></li>
+                        <li><a href="" class="text-secondary">Termos de uso</a></li>
+                        <li><a href="" class="text-secondary">Direitos autorais</a></li>
+                        <li><a href="" class="text-secondary">Regras</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- // -->
+
+    <!-- MODAIS -->
+    <section>
+        <!-- MODAL LOGIN -->
+        <div class="modal fade" id="ModalLogin" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body d-flex justify-content-center">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">E-mail:</label>
+                                <input type="email" class="form-control w-100" id="email-input"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Senha:</label>
+                                <input type="password" class="form-control w-100" id="password-input">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="d-flex justify-content-center gap-5 mb-3 flex-column">
+                        <div class="d-flex justify-content-center gap-3 flex-column align-items-center">
+                            <a href="../pages/cadastro_cliente.html" class="text-secondary">Não tem uma conta?
+                                Cadastre-se</a>
+                            <a href="#" class="text-secondary">Esqueci minha senha</a>
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                    Eu concordo com os <a class="text-primary" href="../termos/termos.html">termos e
+                                        condições</a>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center gap-3 align-items-center">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary" onclick="login()">Entrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // MODAL LOGIN -->
+
+        <!-- MODAL CUPONS -->
+        <div class="modal fade" id="ModalCupom" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body d-flex justify-content-center">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <div class="mb-3">
+                                <img src="../images/cupom/cupom.png" alt="" width="300px">
+                            </div>
+                            <div>
+                                <h5>Digite seu email para receber cupons exclusivos!</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center gap-5 mb-3 flex-column">
+                        <div class="d-flex justify-content-center gap-3 flex-column align-items-center">
+                            <div class="form-group">
+                                <label>Email:</label>
+                                <input type="email" class="form-control" placeholder="Digite seu email">
+                            </div>
+                            <div>
+                                <input class="form-check-input" type="checkbox" value="" id="cupom" required>
+                                <label class="form-check-label" for="cupom">
+                                    <small> Eu concordo com os <a class="text-primary">termos e condições</a></small>
+                                </label>
+                            </div>
+                            <div>
+                                <button class="btn btn-success">Registrar <img src="../images/cupom/presente.png" alt=""
+                                        width="20px"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- //  -->
+</body>
+
+<!-- BOOTSTRAP -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- // BOOTSTRAP -->
+
+<!-- SCRIPTS -->
+<!-- HEADER -->
+<script src="../script/header.js"></script>
+<!-- // HEADER -->
+
+<!-- PRODUTOS -->
+<script src="../script/productsOnlyAcess.js"></script>
+<!--  -->
+
+<script src="../script/timeleft.js"></script>
+
+<!-- BOTÃO SANDUICHE -->
+<script src="../script/sanduich.js"></script>
+<!-- // BOTÃO SANDUICHE -->
+<!-- // SCRIPTS -->
+
+
+</html>

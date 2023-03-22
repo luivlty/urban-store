@@ -1,0 +1,147 @@
+
+.container-timeleft {
+  width: 750px !important;
+  text-align: center;
+  position: relative;
+  font-family: 'Mada', sans-serif;
+  margin-top: 100px;
+  margin: 0 auto;
+}
+
+
+
+.countdown-wrapper {
+  display: flex;
+  gap: 40px;
+  color: red;
+}
+
+.countdown-wrapper-joias {
+    display: flex;
+    gap: 40px;
+    color: pink;
+  }
+
+  .countdown-wrapper-fem {
+    display: flex;
+    gap: 40px;
+    color: white;
+  }
+
+  .countdown-wrapper-man{
+    color: #FEA632;
+  }
+
+label,
+output,
+.time-el span {
+  display: block;
+}
+
+
+.time-el .digit{
+  width: 70px;
+  height: 90px;
+  display: inline-block;
+  font-size: 70px;
+  line-height: 90px;
+  font-family: 'Limelight', cursive;
+  perspective: 120px;
+}
+
+.inner {
+  height: 200%;
+  width: 100%;
+  position: absolute;
+}
+
+.top .inner {
+  top: 0;
+}
+
+.bottom .inner {
+  bottom: 0;
+}
+.time-el .top, .time-el .bottom {
+  position: absolute;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+/*   background: linear-gradient(to bottom, #543243 10%, #461f32 50%, #543243 90%); */
+}
+
+.time-el .top {
+  top: 0;
+  transform-origin: 50% 100%;
+  color: pink;
+  background: linear-gradient(300deg, #331926 50%, #542e40);
+  border-radius: 6px 6px 0 0;
+  z-index: 1;
+  backface-visibility: hidden;
+}
+
+.time-el .bottom {
+  bottom: 0;
+  transform-origin: 50% 0%;
+  background:  linear-gradient(340deg, #542e40, #331926 40%);
+  border-radius: 0 0 6px 6px;
+}
+
+
+label.seconds, label.hours, label.minutes, label.days{
+  color: white !important;
+}
+
+
+
+
+
+#container-effect {
+  color:white;
+  text-transform: uppercase;
+  font-size:34px !important;
+  font-weight:bold;
+  width:100%;
+}
+
+#flip {
+  height:70px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#fff !important;
+  height:45px !important;
+  margin-bottom:45px !important;
+  display:inline-block !important;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background:#42c58a;
+}
+#flip div:first-child div {
+  background:#4ec7f3;
+}
+#flip div:last-child div {
+  background:#DC143C;
+}
+
+@keyframes show {
+    0% {margin-top:-270px;}
+    5% {margin-top:-180px;}
+    33% {margin-top:-180px;}
+    38% {margin-top:-90px;}
+    66% {margin-top:-90px;}
+    71% {margin-top:0px;}
+    99.99% {margin-top:0px;}
+    100% {margin-top:-270px;}
+  }
+  
+  
+
+

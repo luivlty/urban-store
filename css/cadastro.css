@@ -1,0 +1,28 @@
+
+
+.cadastro-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: #FBFBFB;
+    border-radius: 10px;
+    max-width: 1600px;
+    max-height: 800px;
+
+}
+
+
+
+
+
+.forms-cadastro{
+    max-height: 680px;
+    overflow: auto;
+    padding-top: 350px;
+    padding-left: 80px;
+    width:800px;
+}
+
+

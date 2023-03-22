@@ -1,0 +1,49 @@
+
+.carousel-start{
+    height: 450px !important;
+}
+
+.card-title{
+    display: flex;
+    justify-content: center;
+}
+
+/* Efeito escuro no Carousel */
+
+.carousel-item:before {    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.6);
+}
+    
+.carousel-content{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.carousel-images img{
+    height: 700px;
+}
+
+.carousel-start button{
+    height: 600px;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-start, .carousel-item, .carousel-content {
+        width: 100% !important;
+        max-height: 350px;
+    }
+
+    .carousel-start button{
+        height: 550px;
+    }
+
+}
